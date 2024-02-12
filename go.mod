@@ -1,4 +1,4 @@
-module github.com/blind3dd/store_commit_poc
+module github.com/blind3dd/commit_store
 
 go 1.21.3
 

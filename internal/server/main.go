@@ -20,7 +20,8 @@ func NewHTTPServer(addr string) *http.Server {
 	// same endpoint for now to test mutex
 	r.HandleFunc("/v1/commit", httpSrv.handleConsume).Methods("GET")
 	r.HandleFunc("/v1/commit", httpSrv.handleProduce).Methods("POST")
-	//TODO seperate producer from the consumer with gRPC or whatever.
+	//TODO seperate producer from the consumer with gRPC or (not) whatever.
+	// use api-gw annotation for proto3
 	//r.Handle("/v1/produce", r.Methods("POST").GetHandler())
 	//r.Handle("/v1/consume", r.Methods("GET").GetHandler())
 

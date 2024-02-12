@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/blind3dd/store_commit_poc/internal/commit"
+	"github.com/blind3dd/commit_store/internal/commit"
 	"net/http"
 )
 
@@ -15,7 +15,7 @@ func newLogSrv() *httpServer {
 	}
 }
 
-// ProducerRequest dedines REST API request that based on the offset
+// ProducerRequest defines REST API request that based on the offset
 // returns proper record as per Read func in log.go
 type ProducerRequest struct {
 	Record commit.Record `json:"record"`
